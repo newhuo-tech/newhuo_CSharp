@@ -1,6 +1,6 @@
-# Huobi C# SDK
+# New Huo C# SDK
 
-This is Huobi C# SDK, This is a lightweight .NET library, you can use import to your C# project and use this SDK to query all market data, trading and manage your account.
+This is New Huo C# SDK, This is a lightweight .NET library, you can use import to your C# project and use this SDK to query all market data, trading and manage your account.
 
 The SDK supports both synchronous and asynchronous RESTful API invoking, and subscribe the market, account and order update from the websocket connection.
 
@@ -14,7 +14,7 @@ The SDK supports both synchronous and asynchronous RESTful API invoking, and sub
   - [Folder structure](#Folder-Structure)
   - [Client](#Client)
   - [Response](#Response)
-  
+
 - [Request examples](#Request-examples)
 
   - [Common data](#Common-data)
@@ -32,7 +32,7 @@ The SDK supports both synchronous and asynchronous RESTful API invoking, and sub
   - [Subscribe account change](#subscribe-account-change)
 - [Unsubscribe](#unsubscribe)
 
-  
+
 
 ## Quick Start
 
@@ -70,7 +70,7 @@ if (getAIResult != null && getAIResult.data != null)
 
 ### Configuration
 
-If you need to access private data, you need to add **key.json** into your solution. The purpose of this file is to prevent submitting SecretKey into repository by accident, so this file is added in the .gitignore file. 
+If you need to access private data, you need to add **key.json** into your solution. The purpose of this file is to prevent submitting SecretKey into repository by accident, so this file is added in the .gitignore file.
 
 Just create a **key.json** file and include it into your solution with below definition
 
@@ -103,7 +103,7 @@ As the example indicates, there are two important namespaces: **Huobi.SDK.Core.C
 
 ### Client
 
-In this SDK, the client is the object to access the Huobi API. In order to isolate the private data with public data, and isolated different kind of data, the client category is designated to match the API category. 
+In this SDK, the client is the object to access the New Huo API. In order to isolate the private data with public data, and isolated different kind of data, the client category is designated to match the API category.
 
 All the client is listed in below table. Each client is very small and simple, it is only responsible to operate its related data, you can pick up multiple clients to create your own application based on your business.
 
@@ -162,7 +162,7 @@ The API key is used for authentication. If the authentication cannot pass, the i
 
 **Rest Client**: It invokes Rest API and get once-off response.
 
-The method for all Rest Client is **asynchronism**, it invoke Huobi API asynchronous and returns a Task immediately without blocking further statements. If you would like to get the result **synchronous**, just simply access its *Result* property, it will be blocked until the data is returned.
+The method for all Rest Client is **asynchronism**, it invoke New Huo API asynchronous and returns a Task immediately without blocking further statements. If you would like to get the result **synchronous**, just simply access its *Result* property, it will be blocked until the data is returned.
 
 ```csharp
 // You can call the method asynchronously
@@ -186,7 +186,7 @@ You can refer to C# programming guide [Asynchronous programming with async and a
 
 #### Custom host
 
-Each client constructor support an optional host parameter, by default it is "api.huobi.pro". If you need to use different host, you can specify the custom host. 
+Each client constructor support an optional host parameter, by default it is "api.huobi.pro". If you need to use different host, you can specify the custom host.
 
 ```csharp
 // Use "xxx.yyy.zzz" as custom host to create a public client
